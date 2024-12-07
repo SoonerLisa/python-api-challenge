@@ -1,0 +1,81 @@
+import requests
+import datetime
+
+# Define your API key and the base URL
+api_key = 'ef2136e3787f182c09441daecd26b3e1'  # Replace with your actual API key
+base_url = 'http://api.openweathermap.org/data/2.5/weather?'
+
+# Example city name
+#city = 'London' #loop to run thru all cities should go here
+
+weather_json = []
+
+# Loop through each city in the list
+for city in weather_json:
+
+# create query api URL
+    query_url = f"{base_url}appid={api_key}&q={city}&units=metric"  # Use 'metric' for Celsius
+
+# Construct the complete query URL for the city
+    weather_response = requests.get(query_url)
+
+    if weather_response.status_code == 200:
+        weather_json = weather_response.json()
+ 
+# GET request for weather data (a different request is used above)
+    #weather_json = requests.get(query_url + city)
+
+# Check if the request was successful
+#if response.status_code == 200:
+    # Parse the JSON response
+#    weather_json = response_json()
+    #print(weather_json)  # Output the weather data
+    else:
+        print(f"Error: {weather_response.status_code}")
+
+# Assuming city_date is the timestamp you got from the API
+    dt = weather_json['dt']
+
+# Convert the timestamp to a datetime object
+    readable_date = datetime.datetime.fromtimestamp(dt)
+
+# Now you can format it or use it as needed
+#print(readable_date)
+
+# Extract relevant data
+    city_lat = weather_json['coord']['lat']
+    city_lng = weather_json['coord']['lon']
+    city_max_temp = weather_json['main']['temp_max']
+    city_humidity = weather_json['main']['humidity']
+    city_clouds = weather_json['clouds']['all']
+    city_wind = weather_json['wind']['speed']
+    city_country = weather_json['sys']['country']
+    city_date = weather_json['dt']     
+
+#before the following, insert loop to run thru all cities in groups of 50:
+    #it should probably go near line 8
+
+    #Next to Parse the Response (convert the API to JSON)
+        #this is the 'try' step
+        #  city_weather or weather = my code here
+        #  city_lat or lat = my code here...etc.
+
+    #Store JSON data into a list or df and then visualize with Matplotlib
+        #should try this
+            # Append the City information into weather_json list
+    weather_json.append({
+        "City": city,
+        "Lat": city_lat,
+        "Lng": city_lng,
+        "Max Temp": city_max_temp,
+        "Humidity": city_humidity,
+        "Cloudiness": city_clouds,
+        "Wind Speed": city_wind,
+        "Country": city_country,
+        "Date": city_date
+    })  
+    
+    #else: 
+        #print(f"Failed to get data for {city}: {weather_json.status_code}")
+
+    print(weather_json)

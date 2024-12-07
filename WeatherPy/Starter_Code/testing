@@ -1,0 +1,68 @@
+# my "default" API key
+ef2136e3787f182c09441daecd26b3e1
+
+paramaters
+appid is required
+
+examplez of api calls
+
+
+#trying to find a link to use for BASE or to use to find data usable within python loop
+#THESE 2 HAVE ERROR 404
+http://api.openweathermap.org/data/2.5/weather?lat=3.3333&lon20.8833&appid=ef2136e3787f182c09441daecd26b3e1
+
+http://api.openweathermap.org/data/2.5/weather?appid=ef2136e3787f182c09441daecd26b3e1
+
+
+
+#THIS GIVES weather USING LON AND LAT
+#HOW DO I REPLACE (my manually-entered) LAT AND LON WITH A FUNCTION OR LOCATION TO CONNECT MY DATA LIST(S)
+https://api.openweathermap.org/data/2.5/weather?lat=-51.6226&lon=-69.2181&appid=ef2136e3787f182c09441daecd26b3e1
+#RESULTS:
+{"coord":{"lon":-69.2181,"lat":-51.6226},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":284.18,"feels_like":282.75,"temp_min":284.18,"temp_max":284.18,"pressure":1002,"humidity":54,"sea_level":1002,"grnd_level":1001},"visibility":10000,"wind":{"speed":7.2,"deg":270},"clouds":{"all":0},"dt":1732945957,"sys":{"type":1,"id":8293,"country":"AR","sunrise":1732954696,"sunset":1733013215},"timezone":-10800,"id":3838859,"name":"Río Gallegos","cod":200}
+#PRETTY PRINT RESULTS
+{
+  "coord": {
+    "lon": -69.2181,
+    "lat": -51.6226
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 284.18,
+    "feels_like": 282.75,
+    "temp_min": 284.18,
+    "temp_max": 284.18,
+    "pressure": 1002,
+    "humidity": 54,
+    "sea_level": 1002,
+    "grnd_level": 1001
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 7.2,
+    "deg": 270
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1732945957,
+  "sys": {
+    "type": 1,
+    "id": 8293,
+    "country": "AR",
+    "sunrise": 1732954696,
+    "sunset": 1733013215
+  },
+  "timezone": -10800,
+  "id": 3838859,
+  "name": "Río Gallegos",
+  "cod": 200
+}
