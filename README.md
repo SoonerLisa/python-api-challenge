@@ -1,40 +1,41 @@
 # python-api-challenge
 Module 6 Challenge
+Best if using Kernel: dev (Python 3.13.0) ~\anaconda3\envs\dev\python.exe
 Programs needed for the execution of files include:
 -Visual Studio Code
 -Pandas/Python
 -Pyproject
--Geoviews
+-Geoviews/Geoapify
 -Cartopy
 -hvplot
 -OpenWeatherMap
 
 In the "Background" Module 6 Assignment, started with this statement, "Data's true power is its ability to definitively answer questions." I did not accomplish this with the starter code, BCS instruction, class activities solved solutions or BCS Xpert.
 
-Repository URL: 
+Repository URL: https://github.com/SoonerLisa/python-api-challenge.git
+Base URL (Geoapify):base_url = "https://api.geoapify.com"
 2-Part Assignment (Deliverable 1 and 2)
 Deliverable 1: WeatherPy (WeatherPy.ipynb)
-  In this section Python used to script the visualization of weather conditions of over 500 cities of varying distances from the 
-  equator.
+  In this section Python used to script the visualization of weather conditions of over 500 cities of varying distances from the equator.
   Part 1 has 2 requirements.
   
-  Requirement 1: Create Plots to Showcase the Relationship Between Weather Variables and Latitude using OpenWeatherMap to retrieve
-  weather data from cities listed in "cities.csv" starter code to create a series of scatter plots to showcase the relationships:
+Requirement 1: Create Plots to Showcase the Relationship Between Weather Variables and Latitude using OpenWeatherMap to retrieve weather data from cities listed in "cities.csv" starter code to create a series of scatter plots to showcase these relationships:
     -Latitude vs. Temperature
     -Latitude vs. Humidity
     -Latitude vs. Cloudiness
     -Latitude vs. Wind Speed
  
   Requirement 2: Compute Linear Regression for Each Relationship
-    -Added the their linear regression and r^2 values in midst of their plots. Most showed a correlation of plots along the linear         regression line in the Northern Hemisphere, but flatlined on the Southern Hemisphere along with their plots:
-    -Northern Hemisphere: Temperature vs. Latitude
+    -Added the their linear regression and r^2 values in midst of their plots. Most showed a       correlation of plots along the linear regression line in the Northern Hemisphere, but          flatlined on the Southern Hemisphere along with their plots:
+    
+**    -Northern Hemisphere: Temperature vs. Latitude
     -Southern Hemisphere: Temperature vs. Latitude
     -Northern Hemisphere: Humidity vs. Latitude
     -Southern Hemisphere: Humidity vs. Latitude
     -Northern Hemisphere: Cloudiness vs. Latitude
     -Southern Hemisphere: Cloudiness vs. Latitude
     -Northern Hemisphere: Wind Speed vs. Latitude
-    -Southern Hemisphere: Wind Speed vs. Latitude
+    -Southern Hemisphere: Wind Speed vs. Latitude**
 
   Part 2
   Deliverable 2: VacationPy (VacationPy.ipynb)
